@@ -59,24 +59,27 @@ class Unicycle:
         # If you want to view the plot uncomment plt.show() and comment out plt.savefig()
         plt.show()
         # If you want to save the file, uncomment plt.savefig() and comment out plt.show()
-        # plt.savefig(f"Unicycle_{v}_{w}.png")
+        #plt.savefig(f"Unicycle_{v}_{w}.png")
 
 if __name__ == "__main__":
     print("Unicycle Model Assignment")
 
-    robot = Unicycle(0, 0, 0,0.1)
-    final_x , final_y , final_theta = robot.step(1,0.5,25)
-    robot.plot(v = 1.0,w = 0.5)
+    ##TEST-1
+    # robot = Unicycle(0, 0, 0,0.1)
+    # final_x , final_y , final_theta = robot.step(1,0.5,25)
+    # robot.plot(v = 1.0,w = 0.5)
 
+    ##TEST-2
     # robot = Unicycle(0, 0, 1.57,0.2)
     # final_x , final_y , final_theta = robot.step(0.5,1,10)
     # robot.plot(v = 0.5,w = 1)
 
+    ##TEST-3
     # robot = Unicycle(0, 0, 0.77,0.05)
-    # final_x , final_y , final_theta = robot.step(0.5,1,50)
+    # final_x , final_y , final_theta = robot.step(5,4,50)
     # robot.plot(v = 5,w = 4)
 
-
+##Secondary checks
     # print(final_x)
     # print(final_y) 
     # print(final_theta)
