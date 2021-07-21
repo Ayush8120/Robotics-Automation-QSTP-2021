@@ -8,7 +8,7 @@ from geometry_msgs.msg import Twist
 radius = 0
 angular_velocity = 0
 
-def node3():
+def turtlenode():
     
     global angular_velocity
 
@@ -22,8 +22,6 @@ def node3():
         req.radius = radius
         res = ang_velocity_getter(req)
         angular_velocity = res.ang_velocity 
-        # print(angular_velocity)
-        # print("This is in callback")
         	
     
     rospy.init_node('turtlenode')
@@ -37,24 +35,21 @@ def node3():
     print(angular_velocity)
     print("This is in main")
     
-    
-    #for iter in range(5):#
     while not rospy.is_shutdown():
         
         move = Twist()
         move.linear.x = 0.1
         move.angular.z = angular_velocity
-        
-        #print(angular_velocity)
+      
         pub.publish(move)
         rate.sleep()
-        #rospy.sleep(60)
+        
 
 
 
 
 if __name__ == '__main__':
     try:
-        node3()
+        turtlenode()
     except rospy.ROSInterruptException:
         pass
